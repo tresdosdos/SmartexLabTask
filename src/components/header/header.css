@@ -1,0 +1,27 @@
+header{
+    background-color: #24292e;
+    display: flex;
+    justify-content: center;
+    height: 120px;
+    width: 100%;
+}
+
+.header__logo__container{
+    width: 20%;
+}
+
+.header__logo{
+    animation: spin__logo linear infinite 10s;
+    height: 80px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+@keyframes spin__logo {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

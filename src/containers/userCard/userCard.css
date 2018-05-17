@@ -1,0 +1,12 @@
+.user__card__container{
+    border: 2px solid rgb(223, 226, 229);
+    margin: 0 auto;
+    width: 20%;
+}
+
+.user__card__avatar{
+    background: url(avatar.jpg) no-repeat center #c9c9c9;
+    background-size: contain;
+    height: 250px;
+    width: 100%;
+}
