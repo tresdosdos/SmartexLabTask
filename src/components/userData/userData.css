@@ -1,0 +1,33 @@
+.user__card__data{
+    text-align: center;
+}
+
+.user__card__data h2{
+    font-size: 36px;
+    font-weight: 800;
+    margin: 10px;
+}
+
+.user__card__data h3{
+    font-size: 24px;
+    font-weight: 600;
+    margin: 5px;
+}
+
+.user__card__data h4{
+    font-size: 18px;
+    font-weight: 400;
+    margin: 3px;
+}
+
+.user__card__data a{
+    color: #68A2A4;
+    display: block;
+    margin: 5px;
+    text-decoration: none;
+}
+
+.user__card__data a:hover{
+    transition: 0.2s ease-in-out;
+    font-size: 20px;
+}

@@ -1,6 +1,7 @@
 .user__card__container{
     border: 2px solid rgb(223, 226, 229);
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
+    position: relative;
     width: 20%;
 }
 
@@ -8,5 +9,15 @@
     background: url(avatar.jpg) no-repeat center #c9c9c9;
     background-size: contain;
     height: 250px;
+    position: relative;
+    width: 100%;
+}
+
+.user__card__avatar::after{
+    content: 'Your avatar might be here';
+    color: #68A2A4;
+    position: absolute;
+    top:50%;
+    text-align: center;
     width: 100%;
 }
