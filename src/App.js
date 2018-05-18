@@ -9,6 +9,7 @@ import './App.css';
 import Header from './components/header';
 import Main from './containers/main';
 import ModalWindow from './components/modalWindow';
+import UserRoutes from './components/userRoutes'
 
 export const store = createStore(reducers, applyMiddleware(thunk));
 store.subscribe(() => console.log(store.getState()));
@@ -37,7 +38,6 @@ class App extends Component {
     })
   }
   render(){
-    console.log(this.state);
     return (
       <Provider store={store}>
         <Fragment>
@@ -45,11 +45,7 @@ class App extends Component {
           <BrowserRouter>
             <Fragment>
               <Main toggleModal={this.toggleModal}/>
-              <Switch>
-                <Route exact path='/' render={() => { return <div></div>}}/>
-                <Route path={'/user' + 1} render={() => {return <ModalWindow data={1} show={this.state.isOpen} onClose={this.toggleModal}/>}}/>
-                <Route path={'/user' + 2} render={() => {return <ModalWindow data={2} show={this.state.isOpen} onClose={this.toggleModal}/>}}/>
-              </Switch>
+              <UserRoutes isOpen={this.state.isOpen} toggleModal={this.toggleModal}/>
             </Fragment>
           </BrowserRouter>
         </Fragment>

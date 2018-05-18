@@ -1,6 +1,6 @@
 .modal__window__backdrop{
     background-color: rgba(0,0,0,0.3);
-    padding: 50px;
+    padding: 15%;
     position: fixed;
     top: 0;
     bottom: 0;
