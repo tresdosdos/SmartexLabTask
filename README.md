@@ -6,3 +6,7 @@ Task time estimating:
 5. About 5 hours to learn docs about local storage and routing and then 1 hour to make it alive.
 6. I need about 4 hours for some es-/css-linters, smoothy and barber, soo...
 As result, estimated time ~ 23 hours.
+
+First day:
+1. Time from "first commit" to "added functional panel, added some styles" - 4 hours.
+2. Task implementation: task1 - 100%, task2-80%, task3 - 0%, task4 - 80%, task5 - 10%, task6 - 0%
