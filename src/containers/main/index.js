@@ -1,22 +1,28 @@
 import React, { Component } from 'react';
 import './main.css';
 import UserCard from '../../containers/userCard';
+
 import {getUsers} from '../../actions/getUsers';
 import { connect } from "react-redux";
 
 class Main extends Component{
+  constructor (props){
+    super(props);
+    this.state = {
+      isOpen : false
+    }
+  }
   componentDidMount(){
     this.props.getUsers();
   }
   takeContent = () =>{
     const content = this.props.store.users.data;
     const cards = content.map((card) => {
-      console.log(card);
-      return <UserCard data={card}/>
+      return <UserCard data={card} toggleModal={this.props.toggleModal} key={card.username.toString()}/>
     })
     const chunkCards = this.chunkArray(cards, 4);
-    return chunkCards.map((chunkArr) => {
-      return <div className='user__card__row'>
+    return chunkCards.map((chunkArr, index) => {
+      return <div className='user__card__row' key={index}>
         {chunkArr}
       </div>
     })
@@ -32,8 +38,7 @@ class Main extends Component{
     return (
       <main>
         {this.takeContent()}
-      </main>
-    );
+      </main>);
   }
 }
 

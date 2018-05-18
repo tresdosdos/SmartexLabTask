@@ -8,7 +8,7 @@ export default class UserCard extends Component{
     return (<section className='user__card__container'>
       <div className='user__card__avatar'></div>
       <UserData data={this.props.data}/>
-      <FunctionalPanel/>
+      <FunctionalPanel toggleModal={this.props.toggleModal} userID={this.props.data.id}/>
     </section>)
   }
 }
