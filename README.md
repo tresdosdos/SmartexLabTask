@@ -12,7 +12,7 @@ First day:
 2. Task implementation: task1 - 100%, task2-80%, task3 - 0%, task4 - 80%, task5 - 10%, task6 - 0%
 
 Second day:
-1. All tasks done - about 6 hours.
+1. All tasks were done - about 6 hours.
 So as result my work took about 10 hours at all.
 
 
