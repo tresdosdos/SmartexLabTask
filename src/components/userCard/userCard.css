@@ -21,3 +21,9 @@
     text-align: center;
     width: 100%;
 }
+
+@media screen and (max-width: 768px) {
+    .user__card__container{
+        width: 95%;
+    }
+}

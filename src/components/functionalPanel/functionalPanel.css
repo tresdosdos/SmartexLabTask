@@ -11,29 +11,29 @@
     text-decoration: none;
 }
 
-.user__card__func__panel__button1{
+.user__card__func__panel__button{
     align-items: center;
     background: none;
     border: none;
-    border-right: 2px solid #c9c9c9;
     display: flex;
     justify-content: center;
     outline: none;
-    width: 50%;
+    width: 100%;
 }
 
-.user__card__func__panel__button2{
-    background: none;
-    border: none;
-    outline: none;
-    width: 50%;
-}
-
-.user__card__func__panel__button1:hover{
+.user__card__func__panel__button:hover{
+    animation: button_hover 0.2s forwards;
     background-color: #7d7d60;
 }
 
-.user__card__func__panel__button2:hover{
-    background-color: #7a851a;
+.user__card__func__panel__full{
+    height: 50%;
+    width: 50%;
+}
 
+@keyframes button_hover {
+    to{
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.5), 3px 3px 3px rgba(0, 0, 0, 0.25);
+        transform: scale(1.01);
+    }
 }

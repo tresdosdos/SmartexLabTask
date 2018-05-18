@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import ModalWindow from '../modalWindow';
+import ModalWindow from '../../containers/modalWindow';
 
 export default function UserRoutes(props){
   return (

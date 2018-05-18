@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import thunk from 'redux-thunk';
-import { Route, Switch, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import {Provider} from 'react-redux';
 import {createStore, applyMiddleware} from 'redux';
 import reducers from './reducers';
@@ -8,17 +8,15 @@ import './App.css';
 
 import Header from './components/header';
 import Main from './containers/main';
-import ModalWindow from './components/modalWindow';
+import Footer from './components/footer';
 import UserRoutes from './components/userRoutes'
 
 export const store = createStore(reducers, applyMiddleware(thunk));
-store.subscribe(() => console.log(store.getState()));
 
 class App extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      user: -1,
       isOpen: true,
       firstTime: true
     }
@@ -33,8 +31,14 @@ class App extends Component {
       })
       return;
     }
+    if (this.state.isOpen && !this.state.firstTime){
+      this.setState({
+        isOpen: true
+      })
+      return;
+    }
     this.setState({
-      isOpen : !this.state.isOpen
+      isOpen : !this.state.isOpen,
     })
   }
   render(){
@@ -48,6 +52,7 @@ class App extends Component {
               <UserRoutes isOpen={this.state.isOpen} toggleModal={this.toggleModal}/>
             </Fragment>
           </BrowserRouter>
+          <Footer/>
         </Fragment>
       </Provider>
     );

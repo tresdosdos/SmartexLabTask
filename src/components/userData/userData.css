@@ -32,3 +32,58 @@
     transition: 0.2s ease-in-out;
     font-size: 100%;
 }
+
+.modal__window__data{
+    text-align: center;
+}
+
+.modal__window__data h2{
+    font-size: 200%;
+    font-weight: 800;
+    margin: 10px;
+}
+
+.modal__window__data h3{
+    font-size: 150%;
+    font-weight: 600;
+    margin: 5px;
+}
+
+.modal__window__data h4{
+    font-size: 100%;
+    font-weight: 400;
+    margin: 3px;
+}
+
+.modal__window__data a{
+    color: #68A2A4;
+    display: block;
+    font-size: 100%;
+    margin: 5px;
+    text-decoration: none;
+}
+
+.modal__window__data a:hover{
+    transition: 0.2s ease-in-out;
+    font-size: 150%;
+}
+
+@media screen and (max-width: 320px){
+    .modal__window__data h2{
+        font-size: 150%;
+        font-weight: 600;
+        margin: 5px;
+    }
+
+    .modal__window__data h3{
+        font-size: 100%;
+        font-weight: 400;
+        margin: 5px;
+    }
+
+    .modal__window__data h4{
+        font-size: 80%;
+        font-weight: 400;
+        margin: 3px;
+    }
+}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './main.css';
-import UserCard from '../../containers/userCard';
+import UserCard from '../../components/userCard';
 
 import {getUsers} from '../../actions/getUsers';
 import { connect } from "react-redux";
@@ -38,6 +38,7 @@ class Main extends Component{
     return (
       <main>
         {this.takeContent()}
+        {this.props.store.users.error}
       </main>);
   }
 }

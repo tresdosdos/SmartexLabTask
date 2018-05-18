@@ -1,0 +1,27 @@
+.user__company__container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.user__company__menu__button{
+    background: none;
+    border: 1px solid grey;
+    outline: none;
+    width: 100%;
+}
+
+.user__company__info__container{
+    align-items: center;
+    background-color: #f3f3e6;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
