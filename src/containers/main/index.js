@@ -15,13 +15,13 @@ class Main extends Component{
   componentDidMount(){
     this.props.getUsers();
   }
-  takeContent = () =>{
-    const content = this.props.store.users.data;
-    const cards = content.map((card) => {
+  makeCard = (arr) => {
+    return arr.map((card) => {
       return <UserCard data={card} toggleModal={this.props.toggleModal} key={card.username.toString()}/>
     })
-    const chunkCards = this.chunkArray(cards, 4);
-    return chunkCards.map((chunkArr, index) => {
+  }
+  sliceArr = (arr) => {
+    return arr.map((chunkArr, index) => {
       return <div className='user__card__row' key={index}>
         {chunkArr}
       </div>
@@ -33,6 +33,12 @@ class Main extends Component{
       tmp.push(arr.slice(i, i + chunk));
     }
     return tmp;
+  }
+  takeContent = () =>{
+    const content = this.props.store.users.data;
+    const cards = this.makeCard(content);
+    const chunkCards = this.chunkArray(cards, 4);
+    return this.sliceArr(chunkCards);
   }
   render(){
     return (

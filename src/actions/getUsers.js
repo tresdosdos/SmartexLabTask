@@ -1,7 +1,7 @@
 import requestAPI from '../services/requestAPI';
 
 export const getUsers = () => (dispatch) => {
-  requestAPI.get('http://jsonplaceholder.typicode.com/users')
+  requestAPI.get('https://jsonplaceholder.typicode.com/users')
     .then((response) => response.json())
     .then((res) => {
       dispatch({

@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import './modalWindow.css';
 import { connect } from 'react-redux';
@@ -24,13 +24,9 @@ class ModalWindow extends Component{
   }
   render(){
      if (!this.props.show ) return null;
-     let data, lat, lng;
+     let data;
      if (this.state.isReady) {
        data = this.props.store.users.data[this.props.userID - 1];
-       if (this.props.store.users.data[this.props.userID - 1]){
-         lat = parseFloat(data.address.geo.lat);
-         lng = parseFloat(data.address.geo.lng);
-       }
      }
      else data = null;
     return (
